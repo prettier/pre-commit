@@ -5,6 +5,9 @@
   "bin": {
     "prettier": "./cli.js"
   },
+  "files": [
+    "./cli.js"
+  ],
   "repository": "https://github.com/prettier/pre-commit",
   "license": "MIT",
   "private": true,
