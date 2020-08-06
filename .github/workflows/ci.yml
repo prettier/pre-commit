@@ -55,4 +55,4 @@ jobs:
         run: pre-commit install
 
       - name: Run Test
-        run: pre-commit try-repo . --verbose --all-files
+        run: pre-commit try-repo . --verbose --all-files || cat /Users/runner/.cache/pre-commit/pre-commit.log
