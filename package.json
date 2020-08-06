@@ -1,0 +1,11 @@
+{
+  "name": "prettier-for-pre-commit",
+  "version": "0.0.1",
+  "description": "Mirror of prettier package for pre-commit.",
+  "repository": "https://github.com/prettier/pre-commit",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "prettier": "2.0.5"
+  }
+}
