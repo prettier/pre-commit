@@ -1,6 +1,6 @@
 - id: prettier
   name: prettier
-  entry: prettier
+  entry: npm run prettier
   args:
     - --write
     - --list-different
