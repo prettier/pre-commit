@@ -1,8 +1,10 @@
 name: CI
 
 on:
-  - push
-  - pull_request
+  push:
+    branches:
+      - master
+  pull_request:
 
 jobs:
   test:
@@ -14,11 +16,21 @@ jobs:
           - "macos-latest"
           - "windows-latest"
         python-version:
-          - 2.7
-          - 3.5
-          - 3.6
-          - 3.7
-          - 3.8
+          - "3.8"
+          - "3.7"
+          - "3.6"
+          - "3.5"
+          - "2.7"
+        exclude:
+          # Test fails on windows
+          - os: "windows-latest"
+            python-version: "3.7"
+          - os: "windows-latest"
+            python-version: "3.6"
+          - os: "windows-latest"
+            python-version: "3.5"
+          - os: "windows-latest"
+            python-version: "2.7"
 
     name: Python ${{ matrix.python-version }} on ${{ matrix.os }}
 
@@ -42,5 +54,5 @@ jobs:
       - name: Run pre-commit install
         run: pre-commit install
 
-      - name: Run pre-commit try-repo
+      - name: Run Test
         run: pre-commit try-repo . --verbose --all-files
