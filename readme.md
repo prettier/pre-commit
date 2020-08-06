@@ -1,4 +1,4 @@
-# Prettier Mirror
+# Prettier Mirror [![Build Status](https://github.com/prettier/pre-commit/workflows/CI/badge.svg?branch=master)](https://github.com/prettier/pre-commit/actions?query=branch%3Amaster+workflow%3ACI)
 
 > Mirror of prettier package for pre-commit.
 
