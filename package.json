@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Mirror of prettier package for pre-commit.",
   "bin": {
-    "run-prettier": "./cli.js"
+    "prettier": "./cli.js"
   },
   "files": [
     "cli.js"

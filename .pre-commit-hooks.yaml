@@ -1,6 +1,6 @@
 - id: prettier
   name: prettier
-  entry: run-prettier
+  entry: prettier
   args:
     - --write
     - --list-different
