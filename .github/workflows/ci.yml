@@ -54,7 +54,7 @@ jobs:
       - name: Run pre-commit install
         run: pre-commit install
 
-      - run: cd .. && npm i -g ./pre-commit
+      - run: npm i -g .
 
       - name: Run Test
         run: pre-commit try-repo . --verbose --all-files
