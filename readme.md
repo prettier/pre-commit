@@ -1,6 +1,6 @@
 # Prettier Mirror
 
-[![Build Status](https://img.shields.io/github/workflow/status/prettier/pre-commit/Test?style=flat-square)](https://github.com/prettier/pre-commit/actions?query=branch%3Amain+workflow%3ATest)
+[![Build Status](https://img.shields.io/github/workflow/status/prettier/pre-commit/Test?style=flat-square&label=test)](https://github.com/prettier/pre-commit/actions?query=branch%3Amain+workflow%3ATest)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 > Mirror of Prettier package for pre-commit.
