@@ -11,4 +11,6 @@ const binFile = path.join(
   typeof bin === "string" ? bin : bin.prettier
 );
 
+console.log ({prettierPackageJson, bin, directory, binFile})
+
 require(binFile);
