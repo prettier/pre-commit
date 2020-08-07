@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "lint": "prettier . --check",
-    "fix": "prettier . --write"
+    "lint": "npx prettier . --check",
+    "fix": "npx prettier . --write"
   }
 }
