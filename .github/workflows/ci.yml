@@ -51,17 +51,13 @@ jobs:
       - name: Install dependencies
         run: pip install pre-commit
 
-      - name: Display versions
-        run: |
-          node --version
-          npm --version
-          python --version
-          pre-commit --version
+      - name: Display pre-commit version
+        run: pre-commit --version
 
       - name: Run pre-commit install
         run: pre-commit install
 
       - name: Run Test
         env:
-          PRE_COMMIT_HOME: ~/.cache
+          PRE_COMMIT_HOME: .cache
         run: pre-commit try-repo . --verbose --all-files
