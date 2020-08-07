@@ -61,6 +61,7 @@ jobs:
       - run: echo $HOME$
 
       - name: Run Test on (Linux and Windows)
+        # if: matrix.os != 'macos-latest'
         run: pre-commit try-repo . --verbose --all-files
 
       # # Workaround for
