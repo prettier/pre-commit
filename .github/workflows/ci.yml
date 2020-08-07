@@ -55,6 +55,7 @@ jobs:
         run: pre-commit install
 
       - run: ls -l
+      - run: npm pack
 
       - name: Run Test
         run: pre-commit try-repo . --verbose --all-files
