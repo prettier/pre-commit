@@ -1,6 +1,6 @@
 - id: prettier
   name: prettier
-  entry: prettier
+  entry: prettier-for-pre-commit
   args:
     - --write
     - --list-different
