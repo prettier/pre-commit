@@ -1,7 +1,7 @@
 {
   "name": "prettier-for-pre-commit",
   "version": "1.0.0",
-  "description": "Mirror of prettier package for pre-commit.",
+  "description": "Mirror of Prettier package for pre-commit.",
   "bin": "./cli.js",
   "files": [
     "cli.js"
