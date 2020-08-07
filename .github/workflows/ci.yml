@@ -52,7 +52,7 @@ jobs:
         run: pip install pre-commit
 
       - name: Display versions
-        run: >
+        run: |
           node --version
           npm --version
           python --version
