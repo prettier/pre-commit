@@ -21,16 +21,6 @@ jobs:
           - "3.6"
           - "3.5"
           - "2.7"
-        exclude:
-          # Test fails on windows
-          - os: "windows-latest"
-            python-version: "3.7"
-          - os: "windows-latest"
-            python-version: "3.6"
-          - os: "windows-latest"
-            python-version: "3.5"
-          - os: "windows-latest"
-            python-version: "2.7"
 
     name: Python ${{ matrix.python-version }} on ${{ matrix.os }}
 
