@@ -2,5 +2,5 @@
 
 - id: prettier
   name: prettier
-  entry: echo prettier support for pre-commit have been moved to https://github.com/prettier/pre-commit, please checkout the new repository. && exit 1
+  entry: echo "Prettier support for pre-commit have been moved to https://github.com/prettier/pre-commit, please checkout the new repository." && exit 1
   language: system
