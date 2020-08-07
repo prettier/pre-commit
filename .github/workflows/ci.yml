@@ -59,4 +59,4 @@ jobs:
       - run: prettier --help
 
       - name: Run Test
-        run: pre-commit try-repo . --verbose --all-files
+        run: pre-commit try-repo local --verbose --all-files
