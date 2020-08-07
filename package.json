@@ -2,6 +2,7 @@
   "name": "prettier-for-pre-commit",
   "version": "0.0.1",
   "description": "Mirror of prettier package for pre-commit.",
+  "files": [],
   "repository": "https://github.com/prettier/pre-commit",
   "license": "MIT",
   "private": true,
