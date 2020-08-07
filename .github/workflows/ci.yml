@@ -54,5 +54,7 @@ jobs:
       - name: Run pre-commit install
         run: pre-commit install
 
+      - run: ls -l
+
       - name: Run Test
         run: pre-commit try-repo . --verbose --all-files
