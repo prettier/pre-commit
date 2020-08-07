@@ -3,5 +3,5 @@
 - id: prettier
   name: prettier
   pass_filenames: false
-  entry: exit(print(1+2))
+  entry: python -c exit(print(1+2))
   language: system
