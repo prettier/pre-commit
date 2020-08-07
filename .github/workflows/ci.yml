@@ -56,7 +56,7 @@ jobs:
 
       - run: npm i -g .
 
-      - run: prettier
+      - run: prettier --help
 
       - name: Run Test
         run: pre-commit try-repo . --verbose --all-files
