@@ -65,7 +65,7 @@ jobs:
       - run: |
           nodeenv nenv -n system
           . nenv/bin/activate
-          npm install -g doctoc
+          npm install -g .
 
       - name: Run Test
         run: pre-commit try-repo . --verbose --all-files
