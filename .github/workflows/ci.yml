@@ -61,11 +61,7 @@ jobs:
       - name: Run pre-commit install
         run: pre-commit install
 
-      - run: ls -l
-      - run: |
-          nodeenv nenv -n system
-          . nenv/bin/activate
-          npm install -g .
-
       - name: Run Test
+        env:
+          PRE_COMMIT_HOME: ~/.cache
         run: pre-commit try-repo . --verbose --all-files
