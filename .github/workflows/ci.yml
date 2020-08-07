@@ -57,7 +57,17 @@ jobs:
       - name: Run pre-commit install
         run: pre-commit install
 
-      - name: Run Test
-        env:
-          PRE_COMMIT_HOME: .cache
+
+      - run: echo $HOME$
+
+      - name: Run Test on (Linux and Windows)
         run: pre-commit try-repo . --verbose --all-files
+
+      # # Workaround for
+      # # - https://github.com/pre-commit/pre-commit/issues/1440
+      # # - https://github.com/npm/cli/issues/1264
+      # - name: Run Test on (macOS)
+      #   if: matrix.os == 'macos-latest'
+      #   env:
+      #     PRE_COMMIT_HOME: /usr/home/$USER/.cache/pre-commit
+      #   run: pre-commit try-repo . --verbose --all-files
