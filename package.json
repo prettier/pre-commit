@@ -3,11 +3,8 @@
   "version": "0.0.1",
   "description": "Mirror of prettier package for pre-commit.",
   "bin": {
-    "prettier": "cli.js"
+    "prettier": "1.js"
   },
-  "files": [
-    "cli.js"
-  ],
   "repository": "https://github.com/prettier/pre-commit",
   "license": "MIT",
   "private": true,
