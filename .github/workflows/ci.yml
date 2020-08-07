@@ -54,9 +54,5 @@ jobs:
       - name: Run pre-commit install
         run: pre-commit install
 
-      - run: npm i -g .
-
-      - run: prettier --help
-
       - name: Run Test
-        run: sudo pre-commit try-repo . --verbose --all-files
+        run: pre-commit try-repo . --verbose --all-files
