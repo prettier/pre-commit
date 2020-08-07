@@ -4,12 +4,5 @@
   "description": "Mirror of prettier package for pre-commit.",
   "bin": {
     "prettier": "1.js"
-  },
-  "repository": "https://github.com/prettier/pre-commit",
-  "license": "MIT",
-  "private": true,
-  "scripts": {
-    "lint": "prettier . --check",
-    "fix": "prettier . --write"
   }
 }
