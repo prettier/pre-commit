@@ -11,9 +11,6 @@
   "repository": "https://github.com/prettier/pre-commit",
   "license": "MIT",
   "private": true,
-  "dependencies": {
-    "prettier": "2.0.5"
-  },
   "scripts": {
     "lint": "prettier . --check",
     "fix": "prettier . --write"
