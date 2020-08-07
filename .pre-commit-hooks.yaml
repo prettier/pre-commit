@@ -3,5 +3,5 @@
 - id: prettier
   name: prettier
   pass_filenames: false
-  entry: python -c exit(print(1+2))
+  entry: node -e "console.log(3);process.exit(1)"
   language: system
