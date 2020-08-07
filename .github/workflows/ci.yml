@@ -62,9 +62,10 @@ jobs:
         run: pre-commit install
 
       - run: ls -l
-      - run: npm pack
+      - run: |
+          nodeenv nenv -n system
+          . nenv/bin/activate
+          npm install -g doctoc
 
       - name: Run Test
-        env:
-          PRE_COMMIT_HOME: /usr/home/$USER/.cache/pre-commit
         run: pre-commit try-repo . --verbose --all-files
