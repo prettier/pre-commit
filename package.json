@@ -1,6 +1,6 @@
 {
   "name": "prettier-for-pre-commit",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Mirror of prettier package for pre-commit.",
   "bin": "./cli.js",
   "files": [
@@ -13,7 +13,7 @@
     "prettier": "2.0.5"
   },
   "scripts": {
-    "lint": "npx prettier . --check",
-    "fix": "npx prettier . --write"
+    "lint": "prettier . --check",
+    "fix": "prettier . --write"
   }
 }

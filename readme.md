@@ -1,12 +1,16 @@
-# Prettier Mirror [![Build Status](https://github.com/prettier/pre-commit/workflows/Test/badge.svg?branch=main)](https://github.com/prettier/pre-commit/actions?query=branch%3Amain+workflow%3ATest)
+# Prettier Mirror
 
-> Mirror of prettier package for pre-commit.
+[![Build Status](https://img.shields.io/github/workflow/status/prettier/pre-commit/Test?style=flat-square)](https://github.com/prettier/pre-commit/actions?query=branch%3Amain+workflow%3ATest)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-For Prettier: see <https://github.com/prettier/prettier>
+> Mirror of Prettier package for pre-commit.
 
-For pre-commit: see <https://github.com/pre-commit/pre-commit>
+- Prettier: <https://github.com/prettier/prettier>
+- pre-commit: <https://github.com/pre-commit/pre-commit>
 
-## Using Prettier with pre-commit
+## Usage
+
+> Using Prettier with pre-commit
 
 Add this to your `.pre-commit-config.yaml`:
 
