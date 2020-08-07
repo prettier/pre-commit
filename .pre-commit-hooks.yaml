@@ -1,7 +1,7 @@
 # Remove this file after year 2020
 
 - id: prettier
-  name: prettierx
+  name: prettier
+  entry: Prettier support for pre-commit have been moved to https://github.com/prettier/pre-commit, please checkout the new repository.
+  language: fail
   pass_filenames: false
-  entry: echo "Prettier support for pre-commit have been moved to https://github.com/prettier/pre-commit, please checkout the new repository."; exit 1
-  language: system
