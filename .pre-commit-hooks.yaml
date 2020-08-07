@@ -17,3 +17,5 @@
     |vue\
     |yaml|yml\
     )$"
+  additional_dependencies:
+    - .
