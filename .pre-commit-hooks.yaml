@@ -1,19 +1,6 @@
+# Remove this file after year 2020
+
 - id: prettier
   name: prettier
-  entry: prettier-for-pre-commit
-  args:
-    - --write
-    - --list-different
-  language: node
-  files: "\\.(\
-    css|less|scss\
-    |graphql|gql\
-    |html\
-    |js|jsx\
-    |json\
-    |md|markdown|mdown|mkdn\
-    |mdx\
-    |ts|tsx\
-    |vue\
-    |yaml|yml\
-    )$"
+  entry: echo prettier support for pre-commit have been moved to https://github.com/prettier/pre-commit, please checkout the new repository. && exit 1
+  language: system
