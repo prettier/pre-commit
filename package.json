@@ -7,10 +7,18 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
+    "execa": "4.0.3",
+    "js-yaml": "3.14.0",
+    "listr": "0.14.3",
+    "node-fetch": "2.6.0",
     "prettier": "2.0.5"
   },
   "scripts": {
+    "build": "node ./scripts/build-version.js",
     "lint": "prettier . --check",
     "fix": "prettier . --write"
+  },
+  "dependencies": {
+    "enquirer": "2.3.6"
   }
 }
