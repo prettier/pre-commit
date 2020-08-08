@@ -11,10 +11,21 @@ const prettier = require("prettier");
 
 const ROOT = path.join(__dirname, "..");
 
+const CACHE_FILE = path.join(ROOT, "registry-cache.json");
+const CACHE_EXPIRES = 1 * 60 * 60 * 1000;
 async function getVersions() {
+  try {
+    const stat = fs.statSync(CACHE_FILE);
+    if (new Date() - stat.ctime < CACHE_EXPIRES) {
+      return require(CACHE_FILE);
+    }
+  } catch {}
+
   const response = await fetch("https://registry.npmjs.org/prettier");
   const json = await response.json();
-  return Object.keys(json.versions).reverse();
+  const versions = Object.keys(json.versions).reverse();
+  fs.writeFileSync(CACHE_FILE, JSON.stringify(versions, undefined, 2));
+  return versions;
 }
 
 async function selectVersions(versions) {
@@ -71,7 +82,8 @@ function updateFiles(version) {
             },
             {
               title: `Create "${prefixedVersion}" branch`,
-              task: () => execa("git", ["branch", prefixedVersion]).catch(() => {}),
+              task: () =>
+                execa("git", ["branch", prefixedVersion]).catch(() => {}),
             },
             {
               title: `Switch to "${prefixedVersion}" branch`,
