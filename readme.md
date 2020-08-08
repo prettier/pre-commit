@@ -34,4 +34,4 @@ If you want use specific version of Prettier, use [`rev`](https://pre-commit.com
 
 All available versions can be found [here](https://github.com/prettier/pre-commit/tags).
 
-If you can't find the version you want, please [open an issue](https://github.com/prettier/pre-commit/issues/new).
+If you can't find the version you want, please [open an issue](https://github.com/prettier/pre-commit/issues/new?title=Prettier@{{version}}%20is%20missing&labels=bug).
