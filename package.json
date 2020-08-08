@@ -16,7 +16,7 @@
   "scripts": {
     "release": "node ./scripts/release-version.js",
     "lint": "prettier . --check",
-    "fix": "prettier . --write"
+    "format": "prettier . --write"
   },
   "dependencies": {
     "enquirer": "2.3.6"

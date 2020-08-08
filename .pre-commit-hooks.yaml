@@ -2,8 +2,8 @@
   name: prettier
   entry: prettier
   args:
-    - --write
-    - --list-different
+    - "--write"
+    - "--list-different"
   language: node
   files: "\\.(\
     css|less|scss\
