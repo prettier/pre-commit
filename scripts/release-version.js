@@ -102,7 +102,8 @@ const git = (command, commandArguments, silence = true) => {
             },
             {
               title: `Create "${prefixedVersion}" tag`,
-              task: () => git("tag", ["-a", prefixedVersion]),
+              task: () =>
+                git("tag", ["-a", prefixedVersion, "-m", prefixedVersion]),
             },
             {
               title: `Switch back to "main" branch`,
