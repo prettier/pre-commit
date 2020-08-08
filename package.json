@@ -14,7 +14,7 @@
     "prettier": "2.0.5"
   },
   "scripts": {
-    "build": "node ./scripts/build-version.js",
+    "release": "node ./scripts/release-version.js",
     "lint": "prettier . --check",
     "fix": "prettier . --write"
   },
