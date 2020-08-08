@@ -35,7 +35,7 @@ function updateFiles(version) {
   hooks = hooks || fs.readFileSync(hooksFile, "utf8");
   fs.writeFileSync(
     hooksFile,
-    hooks.replace(/prettier@.*\n/, `prettier@${version}`)
+    hooks.replace(/- prettier.*\n/, `- prettier@${version}`)
   );
 }
 
@@ -60,10 +60,10 @@ function updateFiles(version) {
         title: prefixedVersion,
         task: () =>
           new Listr([
-            // {
-            //   title: `Switch to "main" branch`,
-            //   task: () => execa("git", ["checkout", "main"]),
-            // },
+            {
+              title: `Switch to "main" branch`,
+              task: () => execa("git", ["checkout", "main"]),
+            },
             {
               title: `Delete "${prefixedVersion}" branch`,
               task: () => execa("git", ["branch", "-D", prefixedVersion]).catch(() => {}),
@@ -95,10 +95,17 @@ function updateFiles(version) {
                   prefixedVersion,
                 ]),
             },
+            {
+              title: `Switch back to "main" branch`,
+              task: () => execa("git", ["checkout", "main"]),
+            },
           ]),
       };
     })
   );
 
   tasks.run();
-})();
+})().catch(error => {
+  console.error(error);
+  process.exit(1);
+});
