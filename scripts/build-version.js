@@ -87,6 +87,10 @@ function updateFiles(version) {
               task: () => updateFiles(version),
             },
             {
+              title: `Commit files`,
+              task: () => execa("git", ["-am", prefixedVersion]),
+            },
+            {
               title: `Create "${prefixedVersion}" tag`,
               task: () =>
                 execa("git", [
