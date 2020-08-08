@@ -50,6 +50,11 @@ function updateFiles(version) {
   );
 }
 
+const git = (command, commandArguments, silence = true) => {
+  const subprocess = execa("git", [command, ...commandArguments]);
+  return silence ? subprocess.catch(() => {}) : subprocess;
+};
+
 (async () => {
   const allVersions = await getVersions();
   let versions = process.argv.slice(2);
@@ -73,21 +78,19 @@ function updateFiles(version) {
           new Listr([
             {
               title: `Switch to "main" branch`,
-              task: () => execa("git", ["checkout", "main"]),
+              task: () => git("checkout", ["main"], false),
             },
             {
               title: `Delete "${prefixedVersion}" tag`,
-              task: () =>
-                execa("git", ["tag", "-d", prefixedVersion]).catch(() => {}),
+              task: () => git("tag", ["-d", prefixedVersion]),
             },
             {
               title: `Create "${prefixedVersion}" branch`,
-              task: () =>
-                execa("git", ["branch", prefixedVersion]).catch(() => {}),
+              task: () => git("branch", [prefixedVersion]),
             },
             {
               title: `Switch to "${prefixedVersion}" branch`,
-              task: () => execa("git", ["checkout", prefixedVersion]),
+              task: () => git("checkout", [prefixedVersion]),
             },
             {
               title: `Update files`,
@@ -95,22 +98,15 @@ function updateFiles(version) {
             },
             {
               title: `Commit files`,
-              task: () => execa("git", ["commit", "-am", prefixedVersion]),
+              task: () => git("commit", ["-am", prefixedVersion]),
             },
             {
               title: `Create "${prefixedVersion}" tag`,
-              task: () =>
-                execa("git", [
-                  "tag",
-                  "-a",
-                  prefixedVersion,
-                  "-m",
-                  prefixedVersion,
-                ]),
+              task: () => git("tag", ["-a", prefixedVersion]),
             },
             {
               title: `Switch back to "main" branch`,
-              task: () => execa("git", ["checkout", "main"]),
+              task: () => git("checkout", ["main"], false),
             },
           ]),
       };
