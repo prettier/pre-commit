@@ -66,11 +66,13 @@ function updateFiles(version) {
             },
             {
               title: `Delete "${prefixedVersion}" branch`,
-              task: () => execa("git", ["branch", "-D", prefixedVersion]).catch(() => {}),
+              task: () =>
+                execa("git", ["branch", "-D", prefixedVersion]).catch(() => {}),
             },
             {
               title: `Delete "${prefixedVersion}" tag`,
-              task: () => execa("git", ["tag", "-d", prefixedVersion]).catch(() => {}),
+              task: () =>
+                execa("git", ["tag", "-d", prefixedVersion]).catch(() => {}),
             },
             {
               title: `Create "${prefixedVersion}" branch`,
@@ -105,7 +107,7 @@ function updateFiles(version) {
   );
 
   tasks.run();
-})().catch(error => {
+})().catch((error) => {
   console.error(error);
   process.exit(1);
 });
