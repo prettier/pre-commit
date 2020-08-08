@@ -29,15 +29,15 @@ async function getVersions() {
 }
 
 async function selectVersions(versions) {
-  const answers = await prompt({
+  const { selected } = await prompt({
     type: "multiselect",
+    name: "selected",
     message: "Select version(s) you want create:",
     choices: versions,
     initial: versions,
     limit: 15,
   });
-
-  return Array.isArray(answers) ? answers : [answers];
+  return selected;
 }
 
 let hooks;
