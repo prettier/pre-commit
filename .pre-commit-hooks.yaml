@@ -1,6 +1,6 @@
 - id: prettier
   name: prettier
-  entry: prettier-for-pre-commit
+  entry: prettier
   args:
     - --write
     - --list-different
@@ -17,3 +17,5 @@
     |vue\
     |yaml|yml\
     )$"
+  additional_dependencies:
+    - prettier@2.0.5
