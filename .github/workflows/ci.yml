@@ -56,4 +56,4 @@ jobs:
         run: pre-commit install
 
       - name: Run Test
-        run: pre-commit try-repo . --verbose --all-files
+        run: pre-commit try-repo . --verbose --all-files --show-diff-on-failure
