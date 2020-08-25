@@ -8,9 +8,7 @@
   "private": true,
   "devDependencies": {
     "execa": "4.0.3",
-    "js-yaml": "3.14.0",
     "listr": "0.14.3",
-    "node-fetch": "2.6.0",
     "prettier": "2.1.0"
   },
   "scripts": {
