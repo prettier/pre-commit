@@ -5,7 +5,7 @@ const path = require("path");
 const execa = require("execa");
 const Listr = require("listr");
 const prettier = require("prettier");
-const prettierVersion = require("./package.json").devDependencies.prettier;
+const prettierVersion = require("../package.json").devDependencies.prettier;
 
 const ROOT = path.join(__dirname, "..");
 
