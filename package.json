@@ -11,7 +11,7 @@
     "js-yaml": "3.14.0",
     "listr": "0.14.3",
     "node-fetch": "2.6.0",
-    "prettier": "2.0.5"
+    "prettier": "2.1.0"
   },
   "scripts": {
     "release": "node ./scripts/release-version.js",
