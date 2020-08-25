@@ -26,7 +26,7 @@ If you want use specific version of Prettier, use [`rev`](https://pre-commit.com
 
 ```yaml
 - repo: https://github.com/prettier/pre-commit
-  # Use the sha or tag you want to point at
+  # Use the sha or branch you want to point at
   rev: v2.0.0
   hooks:
     - id: prettier
