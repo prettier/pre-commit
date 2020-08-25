@@ -15,7 +15,7 @@ function updateFiles(version) {
   hooks = hooks || fs.readFileSync(hooksFile, "utf8");
   fs.writeFileSync(
     hooksFile,
-    hooks.replace(/- prettier.*\n/, `- prettier@${version}`)
+    hooks.replace(/- prettier.*\n/, `- prettier@${version}\n`)
   );
 }
 
