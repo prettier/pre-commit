@@ -81,10 +81,6 @@ const git = (command, commandArguments, silence = true) => {
               task: () => git("checkout", ["main"], false),
             },
             {
-              title: `Delete "${prefixedVersion}" tag`,
-              task: () => git("tag", ["-d", prefixedVersion]),
-            },
-            {
               title: `Create "${prefixedVersion}" branch`,
               task: () => git("branch", [prefixedVersion]),
             },
@@ -99,11 +95,6 @@ const git = (command, commandArguments, silence = true) => {
             {
               title: `Commit files`,
               task: () => git("commit", ["-am", prefixedVersion]),
-            },
-            {
-              title: `Create "${prefixedVersion}" tag`,
-              task: () =>
-                git("tag", ["-a", prefixedVersion, "-m", prefixedVersion]),
             },
             {
               title: `Switch back to "main" branch`,
