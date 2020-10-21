@@ -2,9 +2,7 @@
   "name": "prettier-for-pre-commit",
   "version": "1.0.0",
   "description": "Mirror of Prettier package for pre-commit.",
-  "bin": {
-    "prettier": "node_modules/prettier/bin-prettier.js"
-  },
+  "bin": "node_modules/prettier/bin-prettier.js",
   "files": [],
   "repository": "https://github.com/prettier/pre-commit",
   "license": "MIT",
