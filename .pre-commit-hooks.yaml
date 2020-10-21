@@ -7,4 +7,4 @@
     - "--ignore-unknown"
   language: node
   additional_dependencies:
-    - prettier@2.1.1
+    - prettier@2.1.2
