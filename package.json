@@ -5,9 +5,6 @@
   "description": "Mirror of Prettier package for pre-commit.",
   "repository": "https://github.com/prettier/pre-commit",
   "license": "MIT",
-  "files": [
-    "cli.js"
-  ],
   "bin": "./cli.js",
   "scripts": {
     "format": "prettier . --write",
