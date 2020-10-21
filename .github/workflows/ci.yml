@@ -29,7 +29,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2.3.1
+        uses: actions/checkout@v2.3.3
 
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
@@ -46,4 +46,4 @@ jobs:
         run: pre-commit install
 
       - name: Run Test
-        run: pre-commit try-repo . --verbose --all-files
+        run: pre-commit try-repo . --verbose --all-files --show-diff-on-failure
