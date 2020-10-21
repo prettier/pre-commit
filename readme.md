@@ -16,6 +16,7 @@ Add this to your `.pre-commit-config.yaml`:
 
 ```yaml
 - repo: https://github.com/prettier/pre-commit
+  rev: main
   hooks:
     - id: prettier
 ```
