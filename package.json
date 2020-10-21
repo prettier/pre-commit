@@ -1,24 +1,25 @@
 {
   "name": "prettier-for-pre-commit",
   "version": "1.0.0",
+  "private": true,
   "description": "Mirror of Prettier package for pre-commit.",
-  "bin": "node_modules/prettier/bin-prettier.js",
-  "files": [],
   "repository": "https://github.com/prettier/pre-commit",
   "license": "MIT",
-  "private": true,
-  "devDependencies": {
-    "execa": "4.0.3",
-    "listr": "0.14.3",
-    "prettier": "2.1.2",
-    "enquirer": "2.3.6"
-  },
+  "files": [
+    "cli.js"
+  ],
+  "bin": "./cli.js",
   "scripts": {
-    "release": "node ./scripts/release-version.js",
+    "format": "prettier . --write",
     "lint": "prettier . --check",
-    "format": "prettier . --write"
+    "release": "node ./scripts/release-version.js"
   },
   "dependencies": {
     "prettier": "2.1.2"
+  },
+  "devDependencies": {
+    "enquirer": "2.3.6",
+    "execa": "4.0.3",
+    "listr": "0.14.3"
   }
 }
