@@ -2,5 +2,3 @@
   name: prettier
   entry: prettier --write --list-different --ignore-unknown
   language: node
-  additional_dependencies:
-    - prettier@2.1.2
