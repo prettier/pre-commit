@@ -1,10 +1,6 @@
 - id: prettier
   name: prettier
-  entry: prettier
-  args:
-    - "--write"
-    - "--list-different"
-    - "--ignore-unknown"
+  entry: prettier --write --list-different --ignore-unknown
   language: node
   additional_dependencies:
     - prettier@2.1.2
