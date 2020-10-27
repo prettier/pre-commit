@@ -7,6 +7,10 @@ const Listr = require("listr");
 const prettier = require("prettier");
 const prettierVersion = require("../package.json").devDependencies.prettier;
 
+if (!prettierVersion) {
+  throw new Error("Unable to get Prettier version.");
+}
+
 const ROOT = path.join(__dirname, "..");
 
 let hooks;
