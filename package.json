@@ -9,7 +9,7 @@
   "devDependencies": {
     "execa": "4.1.0",
     "listr": "0.14.3",
-    "prettier": "2.1.2"
+    "prettier": "2.2.0"
   },
   "scripts": {
     "release": "node ./scripts/release-version.js",
