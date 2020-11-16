@@ -1,3 +1,5 @@
+# Prettier support for pre-commit has been moved into <https://github.com/pre-commit/mirrors-prettier>.
+
 # Prettier Mirror
 
 [![Build Status](https://img.shields.io/github/workflow/status/prettier/pre-commit/Test?style=flat-square&label=test)](https://github.com/prettier/pre-commit/actions?query=branch%3Amain+workflow%3ATest)
